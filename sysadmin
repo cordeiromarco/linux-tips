@@ -1,0 +1,28 @@
+Security
+
+default permissions for /var/www
+The permissions on this folder are:
+chmod 755 /var/www/
+and the files inside the folder are:
+chmod 644 /var/www/file
+
+If you want to create a group with rights on www
+Make sure the group is www-data on '/var/www'.
+sudo chgrp www-data /var/www
+Make it writable
+sudo chmod 775 /var/www
+set group id for subfolders
+sudo chmod g+s /var/www
+add your username to the group
+sudo useradd -G www-data [USERNAME]
+OR
+usermod -a -G www-data [USERNAME]
+give yourself ownership
+sudo chown [USERNAME] /var/www/
+
+Disk tools
+
+to show disk usage on / excluding /proc
+for d in /*; do egrep " ${d} " /proc/mounts > /dev/null || du -sh ${d}; done
+
+
