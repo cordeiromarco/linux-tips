@@ -33,4 +33,10 @@ Disk tools
 to show disk usage on / excluding /proc
 for d in /*; do egrep " ${d} " /proc/mounts > /dev/null || du -sh ${d}; done
 
+What if you want to display the disk usage of the first-level subdirectories? 
+du -shc /var/*
+or
+du -h --max-depth=1 /var
+
+
 
