@@ -31,6 +31,8 @@ sudo chown [USERNAME] /var/www/
 Disk tools
 
 to show disk usage on / excluding /proc
+du -shc /* 2< /dev/null
+or
 for d in /*; do egrep " ${d} " /proc/mounts > /dev/null || du -sh ${d}; done
 
 What if you want to display the disk usage of the first-level subdirectories? 
