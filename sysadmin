@@ -6,13 +6,22 @@ chmod 755 /var/www/
 and the files inside the folder are:
 chmod 644 /var/www/file
 
-#Define WWW group and add users
+#Define WWW group and add users (CENTOS)
 groupadd www
 usermod -a -G www ec2-user
 chown -R root:www /var/www
 chmod 2775 /var/www
 find /var/www -type d -exec chmod 2775 {} +
 find /var/www/ -type f -exec chmod 0664 {} +
+
+#Define WWW group and add users (UBUNTU)
+sudo usermod -a -G www-data ubuntu
+sudo cat /etc/group|grep www-data
+sudo chown -R root:www-data /var/www
+sudo chmod 2775 /var/www
+sudo find /var/www -type d -exec chmod 2775 {} +
+sudo find /var/www/ -type f -exec chmod 0664 {} +
+sudo chown ubuntu /var/www/html/
 
 If you want to create a group with rights on www
 Make sure the group is www-data on '/var/www'.
