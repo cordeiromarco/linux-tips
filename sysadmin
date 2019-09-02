@@ -23,19 +23,6 @@ sudo find /var/www -type d -exec chmod 2775 {} +
 sudo find /var/www/ -type f -exec chmod 0664 {} +
 sudo chown ubuntu /var/www/html/
 
-If you want to create a group with rights on www
-Make sure the group is www-data on '/var/www'.
-sudo chgrp www-data /var/www
-Make it writable
-sudo chmod 775 /var/www
-set group id for subfolders
-sudo chmod g+s /var/www
-add your username to the group
-sudo useradd -G www-data [USERNAME]
-OR
-usermod -a -G www-data [USERNAME]
-give yourself ownership
-sudo chown [USERNAME] /var/www/
 
 Disk tools
 
