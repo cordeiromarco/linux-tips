@@ -1,0 +1,6 @@
+
+#deploy tasks
+sudo su -
+wget https://s3.amazonaws.com/zabbix.ipsense/public-key/add-user-ssh-pem.sh
+chmod +x add-user-ssh-pem.sh
+./add-user-ssh-pem.sh username
