@@ -36,5 +36,13 @@ du -shc /var/*
 or
 du -h --max-depth=1 /var
 
+Process running listen ports
+
+sudo lsof -i -P -n | grep LISTEN
+or
+sudo netstat -tulpn | grep LISTEN
+or
+sudo ss -tulwn
+
 
 
