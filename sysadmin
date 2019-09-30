@@ -44,5 +44,8 @@ sudo netstat -tulpn | grep LISTEN
 or
 sudo ss -tulwn
 
+to check remote host use:
+sudo nmap -sT -O localhost
+
 
 
