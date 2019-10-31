@@ -1,3 +1,14 @@
+Customize
+.basrc
+
+#Aliases
+alias ec2='sudo su - ec2-user'
+alias cls='clear'
+alias rm='rm -i'
+
+#Path
+export PATH = $PATH:/variable_dir_path/
+
 Security
 
 default permissions for /var/www
